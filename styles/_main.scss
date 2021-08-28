@@ -1,0 +1,174 @@
+.main{
+    background-color: white;
+    width: 100vw;
+    padding: 35px 23.5px 14px 23px;
+    opacity: 0.7;
+    position: relative;
+
+    .title{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom: 1px solid #0000001e;
+        .favorite{
+            display: flex;
+            h2{
+                font-style: normal;
+                font-weight: bold;
+                font-size: 20px;
+                line-height: 24px;
+                margin-right: 5px;  
+            }
+        }
+
+        .search{
+            display: flex;
+            column-gap: 24px;
+
+            div{
+                display: flex;
+                align-items: center;
+                span{
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 14px;
+                    line-height: 17px;
+                    margin-left: 5px;
+                }
+            }
+
+            input{
+                border: 1px solid #8D8D8D;
+                border-radius: 5px; 
+                padding: 8px 0 9px 16px;
+                position: relative;
+             
+            }
+
+            input::after{
+                content: url('../assets/icons/micro.svg');
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 3;
+                width: 20px;
+                height: 20px;
+            }
+
+            input::placeholder{
+                padding: 8px 0 9px 0;
+            }
+
+        }
+    }
+
+    .messages{
+        display: flex;
+        flex-direction: column;
+        row-gap: 10px;
+        padding: 19px 0;
+
+        .mess{
+            display: flex;
+            column-gap: 15px;
+            img{
+                width: 50px;
+                height: 50px; 
+                border-radius: 5px; 
+                object-fit: cover;
+            }
+
+            .mess-body{
+                display: flex;
+                flex-direction: column;
+                
+                .mess-name{
+                    display: flex;
+                    align-items: center;
+                    column-gap: 10px;
+
+                    h2{
+                        font-style: normal;
+                        font-weight: bold;
+                        color: black;
+                        font-size: 12px;
+                        line-height: 14px;
+                    }
+
+                    span{
+                        font-style: normal;
+                        font-weight: normal;
+                        font-size: 12px;
+                        line-height: 14px;
+                        color: #8D8D8D;
+                    }
+                }
+
+                p{
+                    font-style: normal;
+                    font-weight: normal;
+                    font-size: 13px;
+                    line-height: 18px;
+                    color: #000000;
+                }
+
+                .img-name{
+                    color: #3577EF;
+                }
+
+                .mess-img{
+                    width: 300px;
+                    height: 200px;
+                    border-radius: 10px;
+                }
+
+                // .mess-img::after{
+                //    content: ':love_you_gesture: 3'; 
+                //    width: 45px;
+                //    height: 25px;
+                //    background-color: whitesmoke;
+                //    position: absolute;
+                //    bottom: 0;
+                //    right: 0;
+                // }
+            }
+        }
+
+        .newDay{
+            display: flex;
+            justify-content: center;
+            white-space: nowrap;
+            align-items: center; 
+            opacity: 0.16;
+        }
+
+        .newDay::before, .newDay::after{
+            content: '';
+            display: flex;
+            width: 100%;
+            height: 1px;
+            margin: 0 10px;
+            background-color: black;
+        }
+
+    }
+
+    .input-field{
+        display: flex;
+        position: absolute;
+        border-top: 1px solid rgba(0, 0, 0, 0.2);
+        align-items: center;
+        padding: 0 20px;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100px;
+        column-gap: 20px;
+
+        input{
+            flex: 1 0 auto;
+            border: none;
+            height: 50px;
+        }
+    }
+}
